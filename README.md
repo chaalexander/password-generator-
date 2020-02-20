@@ -7,6 +7,7 @@
 
 # <h2>Contributor
 @chaalexander
+@git_theresa
 
 # <h2> Tecnology Stack
 
