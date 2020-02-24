@@ -1,10 +1,10 @@
 
 var generateBtn = document.querySelector("#generate");
-var lowerCaseValue;
-var upperCaseValue;
-var numberCaseValue;
-var specialCharValue;
-var passLengthValue;
+var lowerValue;
+var upperValue;
+var numberValue;
+var specialValue;
+var pwdLengthValue;
 
 
 function writePassword() {
@@ -17,47 +17,47 @@ function generatePassword() {
   var passLength = prompt(" Choose a length of at least 8 Characters and no more than 128. ");
   var passCriteria = [];
   if (passLength >= 8 && passLength <= 128) {
-    passLengthValue = parseInt(passLength);
+    pwdLengthValue = parseInt(passLength);
 
-    var lowerCase = confirm("Do you want lowercase letters?");
-    var upperCase = confirm("Do you want uppercase letters?");
-    var numberCase = confirm("Do you want numbers?");
-    var specialChar = confirm("Do you want special characters?");
+    var lowerletter = confirm("Do you want lowercase letters?");
+    var upperletter = confirm("Do you want uppercase letters?");
+    var number = confirm("Do you want numbers?");
+    var special = confirm("Do you want special characters?");
   }
    else {
     alert("Please try again!");
   } 
   
-    if (lowerCase===true) {
-      lowerCaseValue = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-        for (i = 0; i < lowerCaseValue.length; i++) {
-          passCriteria.push(lowerCaseValue[i]);
+    if (lowerletter===true) {
+      lowerValue = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        for (i = 0; i < lowerValue.length; i++) {
+          passCriteria.push(lowerValue[i]);
         }
     }
   
-    if (upperCase===true) {
-      upperCaseValue = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-        for (i = 0; i < upperCaseValue.length; i++) {
-          passCriteria.push(upperCaseValue[i]);
+    if (upperletter===true) {
+      upperValue = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        for (i = 0; i < upperValue.length; i++) {
+          passCriteria.push(upperValue[i]);
       }
     }
   
-    if (numberCase===true) {
-      numberCaseValue = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-      for (i = 0; i < numberCaseValue.length; i++) {
-        passCriteria.push(numberCaseValue[i]);
+    if (number===true) {
+      numberValue = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+      for (i = 0; i < numberValue.length; i++) {
+        passCriteria.push(numberValue[i]);
       }
     }
   
-    if (specialChar===true) {
-      specialCharValue = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", ":", ";", "'", "<", ">", "?", "/", "`", "~"];
-      for (i = 0; i < specialCharValue.length; i++) {
-        passCriteria.push(specialCharValue[i]);
+    if (special===true) {
+      specialValue = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "[", "}", "]", ":", ";", "'", "<", ">", "?", "/", "`", "~"];
+      for (i = 0; i < specialValue.length; i++) {
+        passCriteria.push(specialValue[i]);
       }
     }
     
     var newPassword = ""
-    for (var i = 0; i < passLengthValue; i++) {
+    for (var i = 0; i < pwdLengthValue; i++) {
       newPassword += passCriteria[Math.floor(Math.random() * passCriteria.length)];
     }
     return newPassword;
