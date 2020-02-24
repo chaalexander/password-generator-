@@ -6,8 +6,8 @@
  https://chaalexander.github.io/password-generator-/
 
 # <h2>Contributor
-@chaalexander
-@git_theresa
+* @chaalexander
+* @git_theresa
 
 # <h2> Tecnology Stack
 
